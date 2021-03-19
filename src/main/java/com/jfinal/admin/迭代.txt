@@ -1,0 +1,24 @@
+1：在内容管理模块添加文件管理
+
+2：各模块的 pageSize 抽取到一个常量中，并使用 PropKit.getInt("pageSize", 25) 初始化
+
+3：将 bootstrap 4 核心组件的文档整合到《组件整合》模块，复制即可使用，提升开发效率
+
+4：考虑将 confirm 交互做成叠加到其它几种交互之上的方式，具体实施时是否可以在原有交互中添加
+   对 confirm 属性的处理，从而可以去掉 jfinal-kit 中的 confirm 与 bindConfirm
+   这样设计可以消除 confirm 这种交互模式，使其只当成原有模式的可选功能
+   例如叠加到 msg 上的用法：<a confirm="确定操作？" msg url="/admin/action">操作</a>
+
+5：创建、修改文章打开新页面，而不使用 open 交互
+
+6：新增文章详情页，用于预览文章
+
+
+
+------------------------------------------
+菜单滚动条方案：
+1：使用 margiin-right: -20px 将滚动条显示在父容器宽度之外，并利用父容器的 overflow:hidden 隐藏
+2：滚动条的 width 与 height 为 0（IE 不支持）
+3：使用 overflow:hidden，依赖 jquery.slimscroll.min.js 支持滚动
+
+
